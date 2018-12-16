@@ -6,11 +6,15 @@ var express = require("express");
 // Express app instance
 var app = express();
 
+
 // Port of our application
 // process.env.PORT lets the port be set by Heroku
 var PORT = process.env.PORT || 8080; 
 
-// Routes
+// Sets up the Express app to handle data parsing
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 app.get("/", function(req, res) {
 
 // If the main route is hit, then we initiate a SQL query to grab all records.
@@ -24,3 +28,14 @@ for (var i = 0; i < result.length; i++) {
 }
 }
 })
+
+// ROUTER
+// Points our server to a series of "route" files.
+// These routes give our server a "map" of how to respond when users visit or request data from various URLs 
+require("./routes/htmlRoutes")(app);
+require("./routes/apiRoutes")(app);
+
+// LISTENER
+app.listten(PORT, function() {
+    console.log("App listening on PORT: " + PORT);
+});
