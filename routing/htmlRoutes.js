@@ -1,4 +1,4 @@
-// Dependencies 
+// Dependencies [A state in which one object uses a function of another object.]
 // Include the path package to get the correct file path for our html
 var path = require("path");
 
@@ -13,12 +13,9 @@ module.exports = function(app) {
         res.sendFile(path.join(__dirname, "../public/survey.html"));
     });
 
-    app.get("/home", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/home.html"));
-    });
-
-// Default to home
-    app.get("*", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/home.html"));
+// Default to the home page
+    app.use(function(req, res) {
+        res.sendFile(path.join(__dirname, "/../public/home.html"));
     });
 };
+
