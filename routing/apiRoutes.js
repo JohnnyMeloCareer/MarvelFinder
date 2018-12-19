@@ -2,7 +2,7 @@
 // We are linking our routes to a series of "data" sources.
 // These data sources hold arrays of information on placeholder-data, etc
 
-var marvelArray = require("../data/friends");
+var marvelArray = require("../data/friends.js");
 
 // ROUTING 
 
