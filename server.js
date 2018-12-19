@@ -2,6 +2,8 @@
 
 // Dependencies 
 var express = require("express");
+var bodyParser = require("body-parser");
+var path = require("path");
 
 // Express app instance
 var app = express();
@@ -11,23 +13,18 @@ var app = express();
 // process.env.PORT lets the port be set by Heroku
 var PORT = process.env.PORT || 8080; 
 
-// Sets up the Express app to handle data parsing
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+// Parse application/ urlencoded
+// Set extended to true to parse nested objects
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get("/", function(req, res) {
+// Parse various different custom JSON types as JSON
+app.use(bodyParser.json({ type: 'application/*+json' }))
 
-// If the main route is hit, then we initiate a SQL query to grab all records.
-// All of the resulting records are stored in the variables "results."
-connection.query("SELECT * FROM placeholder", function(err, result) {
+// This allows us to parse some custom's thing into a Buffer
+app.use(bodyParser.raw({ type: 'application/vnd.custom-type' }))
 
 // We then use the retrieved records from the database to populate our HTML file.
-for (var i = 0; i < result.length; i++) {
-    html += 
-    html +=
-}
-}
-})
+app.use(bodyParser.text({ type: 'text/html' }))
 
 // ROUTER
 // Points our server to a series of "route" files.

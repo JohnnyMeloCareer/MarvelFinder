@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Marvel Finder</title>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
+        <!-- Google Font-->
+        <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+        <!-- JQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <!-- Bootstrap -->
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+        <!-- jQuery -->
+        <!-- <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script> -->
+        <!-- cloudflare from bootstrap site -->
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script> -->
+        <!-- Bootstrap js -->
+        <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+        <!-- Fontawesome -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1 id="surveyHeader"> Marvel Survey Questions</h1>
+            <hr>
+            <form name="surveyForm">
+                <h2>About You</h2>
+                <div class="form-group">
+                    <label for="user-name"><h4>Name (Required)</h4></label>
+                    <input class="form-control" type="text" id="userName" required>
+                </div>
+                <div class="form-group">
+                    <label for="user-picture"><h4>Link to Photo Image (Required)</h4></label>
+                    <input class="form-control" type="text" id="userPicture" required>
+                </div>
+                <hr>
+
+                <!-- Question 1-->
+                <div class="form-group">
+                    <h4>Question 1</h4>
+                    <label for="question1">You like spiders.</label>
+                    <select required class="form-control chosen-select question" id="q1">
+                        <option value="">Select and Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+                
+                <!-- Question 2-->
+                <div class="form-group">
+                    <h4>Question 2</h4>
+                    <label for="question2">Guys with the name Thor.</label>
+                    <select class="form-control chosen-select question" id="q2">
+                        <option value="">Select and Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+
+                <!-- Question 3-->
+                <div class="form-group">
+                        <h4>Question 3</h4>
+                        <label for="question3">You like armor made of iron.</label>
+                        <select class="form-control chosen-select question" id="q3">
+                            <option value="">Select and Option</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+
+                <!-- Question 4-->
+                <div class="form-group">
+                        <h4>Question 4</h4>
+                        <label for="question4">A Doctor that acts Strange.</label>
+                        <select class="form-control chosen-select question" id="q4">
+                            <option value="">Select and Option</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    
+                <!-- Question 5-->
+                <div class="form-group">
+                        <h4>Question 5</h4>
+                        <label for="question5">Truth or Dare.</label>
+                        <select class="form-control chosen-select question" id="q5">
+                            <option value="">Select and Option</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    
+                <!-- Question 6-->
+                <div class="form-group">
+                        <h4>Question 6</h4>
+                        <label for="question6">Turning green whenever you get upset.</label>
+                        <select class="form-control chosen-select question" id="q6">
+                            <option value="">Select and Option</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    
+                <!-- Question 7-->
+                <div class="form-group">
+                        <h4>Question 7</h4>
+                        <label for="question7">Having a sense of good mobility.</label>
+                        <select class="form-control chosen-select question" id="q7">
+                            <option value="">Select and Option</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    
+                <!-- Question 8-->
+                <div class="form-group">
+                        <h4>Question 8</h4>
+                        <label for="question8">Liking Fairy Odd Parents.</label>
+                        <select class="form-control chosen-select question" id="q8">
+                            <option value="">Select and Option</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    
+                <!-- Question 9-->
+                <div class="form-group">
+                        <h4>Question 9</h4>
+                        <label for="question9">Do you like being fast? Like a Panther.</label>
+                        <select class="form-control chosen-select question" id="q9">
+                            <option value="">Select and Option</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                    
+                <!-- Question 10-->
+                <div class="form-group">
+                        <h4>Question 10</h4>
+                        <label for="question10">You are good when it comes to communication.</label>
+                        <select class="form-control chosen-select question" id="q10">
+                            <option value="">Select and Option</option>
+                            <option value="1">1 (Strongly Disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Strongly Agree)</option>
+                        </select>
+                    </div>
+                                        
+                <!-- Submit Button for Form -->
+                <button type="submit" class="btn btn-primary" id="formSubmit">Submit &nbsp &nbsp <i class="far fa-paper-plane"></i></button>
+                <hr>
+
+            </form>
+        
+            <footer class="text-left">
+                <a href="/api/friends">API Friends List </a>  |  
+                <a href="https://github.com/JohnnyMeloCareer/FriendFinder"> GitHub Repo</a>
+            </footer>
+        </div>
+
+        <!-- Modal For Form Control-->      
+        <div class="modal" id="formControlModal" tabindex="-1" role="dialog">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h4 class="modal-title">Required Fields</h4>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <p>You have left some questions unanswered.<br>
+                        Please go back and answer all of the questions.</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+ 
+        <!-- Modal For Best Match-->
+        <div class="modal fade" id="bestMatchModal" tabindex="-1" role="dialog" aria-labelledby="bestMatchModalTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h2 class="modal-title text-center" id="bestMatchModalHeader">Your New BFF!</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                </div>
+                <div class="modal-body">
+                    <img id="bestMatchPhoto" style="width: 100%" src="" alt="Photo of the Best Matched Friend">
+                    <h3 id="bestMatchName">Hello, friend! My name is </h3>                       
+                </div>
+                <div class="modal-footer">
+                <button type="button" id="doItAgain" class="btn btn-secondary" data-dismiss="modal">Fill Out Survey Again</button>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <style>
+            body {
+                font-family: 'Acme', sans-serif;
+                background-image: url(https://img.freepik.com/free-vector/blue-comic-background-with-lines-and-halftone_1017-11432.jpg?size=338&ext=jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center center;
+            }
+            a {
+                padding-bottom: 20px;
+            }
+            label {
+                font-size: 17px;
+            }
+            #surveyHeader {
+                margin-top: 20px;
+                font-size: 50px;
+            }
+            #formSubmit {
+                width: 100%;
+                font-size: 20px;
+                background-color: lightskyblue;
+                border-color: lightgoldenrodyellow;
+            }
+            #formSubmit:hover {
+                background-color: lightcoral;
+                border-color: lightgoldenrodyellow;
+            }
+            h4 {
+                font-weight: normal;
+            }
+            .question{
+                width: 200px;
+            }
+        </style>
+
+        <script>
+            $("#formSubmit").on("click", function(event) {
+                event.preventDefault();
+                function formValidation() {
+                    var isValid = true;
+                    $(".form-control").each(function() {
+                        if($(this).val() === "") {
+                            isValid = false;
+                        }
+                    });
+                    return isValid;
+                };
+                if (formValidation()) {
+                    var newFriendData = {
+                        name: $("#userName").val(),
+                        photo: $("#userPicture").val(),
+                        scores: [
+                            $("#q1").val(),
+                            $("#q2").val(),
+                            $("#q3").val(),
+                            $("#q4").val(),
+                            $("#q5").val(),
+                            $("#q6").val(),
+                            $("#q7").val(),
+                            $("#q8").val(),
+                            $("#q9").val(),
+                            $("#q10").val()
+                        ]
+                    };
+                    // Sending the user information to apiRoutes.js to match with friend, then it sends back the best match
+                    // function(data) data - contains bestMatch information
+                    $.post("/api/friends", newFriendData, function(data) {
+                        // If statement is able to run because res.json(bestMatch); in the app.post request in apiRoutes.js, which sent back the best match based on the user's answers
+                        if (data) {
+                            $("#bestMatchName").text("Hello, " + newFriendData.name + "! My name is " + data.name + "!");
+                            $("#bestMatchPhoto").attr("src", data.photo);
+                            $("#bestMatchModal").modal("toggle");
+                          
+                        }
+                    });
+                } else {
+                    $("#formControlModal").modal("toggle");
+                }
+            });
+            $("#doItAgain").on("click", function(event) {
+                event.preventDefault();
+                location.reload();
+            })
+        </script>
+    </body> 
+    </body>
+</html>
