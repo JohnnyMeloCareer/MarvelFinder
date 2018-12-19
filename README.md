@@ -15,12 +15,11 @@ This full-stack site will take in results from your users' surveys, then compare
 
 ### Marvel Finder Survey Page Submit
 - content:
-![alt text](NA)
+![alt text](https://github.com/JohnnyMeloCareer/FriendFinder/blob/master/public/assets/images/Marvel%20Finder%20Survey%20Page%20Submit%20button.jpg)
 
-# Marvel Finder Tools
+# Marvel Finder Technologies 
 - Bootstrap
 - Fontawesome
--
 
 # Marvel Finder Conclusion
 - Marvel Finder, is a very exciting ways to match up with a favorite super hero of yours! 
