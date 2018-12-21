@@ -2,7 +2,7 @@
 // We are linking our routes to a series of "data" sources.
 // These data sources hold arrays of information on placeholder-data, etc
 
-var marvelArray = require("../data/friends.js");
+var marvelArray = require("../public/data/friends.js");
 
 // ROUTING 
 
@@ -13,9 +13,9 @@ module.exports = function(app) {
 // In each of the below cases when a user visits a link
 // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
 
-app.get("/api/friends", function(req, res) {
-    res.json(marvelArray);
-});
+    app.get("/api/friends", function(req, res) {
+        res.json(marvelArray);
+    });
 
 
 // API POST Requests
@@ -27,23 +27,23 @@ app.get("/api/friends", function(req, res) {
 // (ex. User fills out a placeholder request... this data is sent to the server...)
 // Then the server saves the data to the placeholderData array)
 
-app.post("/api/friends", function(req, res) {
-    
-    marvelArray.push(req.body); 
-    
-    var bestMatch = {
-        name: "",
-        photo: "",
-        scoresDifference: Infinity
-    }
+    app.post("/api/friends", function(req, res) {
+        
+        marvelArray.push(req.body); 
+        
+        var bestMatch = {
+            name: "",
+            photo: "",
+            scoresDifference: Infinity
+        }
 
-var userData = (req.body);
-var userScore = userData.scores;   
+            var userData = (req.body);
+            var userScore = userData.scores;   
 
-
+    })
 // Variable to hold the array that going to be the total difference between two users.
 
-var totalDifference;
+        var totalDifference;
 
 
 // Set for loop to go through each user and compare with most recent submission
@@ -54,13 +54,13 @@ for (let i = 0;i < marvelArray.length -1; i++){
 
     console.log(currentMarvel.name);
 
-for (let m = 0; m < currentMarvel.scores.length; m--){
-var currentMarvelScore = currentMarvel.scores[m];
-var currentUserScore = userScore[m];
+// for (let m = 0; m < currentMarvel.scores.length; m--){
+// var currentMarvelScore = currentMarvel.scores[m];
+// var currentUserScore = userScore[m];
 
 // Calculated the differences between the scores and sum them into the totalDifference
-totalDifference += Math.abs(parseInt(currentUserScore) -(parseInt(currentMarvelScore))
-}
+// totalDifference += Math.abs(parseInt(currentUserScore) -(parseInt(currentMarvelScore))
+
 
 
 // Take the absolute value of the difference of each question's answer and add them together
@@ -76,7 +76,7 @@ else {
     placeholderData.push(req.body);
     res.json(false);
 }
-);
+
 
 app.post("/api/clear", function(req, res) {
 // Empty out the arrays of data
@@ -84,4 +84,6 @@ marvelArray.length = [];
 
 res.json({ ok: true });
 });
-};
+
+}
+}

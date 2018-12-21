@@ -26,11 +26,13 @@ app.use(bodyParser.raw({ type: 'application/vnd.custom-type' }))
 // We then use the retrieved records from the database to populate our HTML file.
 app.use(bodyParser.text({ type: 'text/html' }))
 
+// This make my public folder the route of the folder directory.
+app.use(express.static("public"));
 // ROUTER
 // Points our server to a series of "route" files.
 // These routes give our server a "map" of how to respond when users visit or request data from various URLs 
-require("./routes/htmlRoutes")(app);
-require("./routes/apiRoutes")(app);
+require("./routing/htmlRoutes")(app);
+require("./routing/apiRoutes")(app);
 
 // LISTENER
 app.listten(PORT, function() {
