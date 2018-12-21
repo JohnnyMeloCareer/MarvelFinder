@@ -13,6 +13,10 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "/../public/survey.html"));
   });
 
+  app.use(function(req, res) {
+    res.sendFile(path.join(__dirname, "/../public/home.html"));
+  });
+
   // Asterik is the wild card
   // Default call to bring you home, as long you're in the server.
   app.get("*", function(req, res) {

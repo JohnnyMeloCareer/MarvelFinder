@@ -2,7 +2,7 @@
 // We are linking our routes to a series of "data" sources.
 // These data sources hold arrays of information on placeholder-data, etc
 
-var marvelArray = require("../public/data/friends.js");
+var marvelArray = require("../data/marvel");
 
 // ROUTING 
 
@@ -13,7 +13,7 @@ module.exports = function(app) {
 // In each of the below cases when a user visits a link
 // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
 
-    app.get("/api/friends", function(req, res) {
+    app.get("/api/marvel", function(req, res) {
         res.json(marvelArray);
     });
 
@@ -27,7 +27,7 @@ module.exports = function(app) {
 // (ex. User fills out a placeholder request... this data is sent to the server...)
 // Then the server saves the data to the placeholderData array)
 
-    app.post("/api/friends", function(req, res) {
+    app.post("/api/marvel", function(req, res) {
         
         marvelArray.push(req.body); 
         

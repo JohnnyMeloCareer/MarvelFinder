@@ -3,7 +3,6 @@
 // Dependencies 
 var express = require("express");
 var bodyParser = require("body-parser");
-var path = require("path");
 
 // Express app instance
 var app = express();
@@ -31,8 +30,8 @@ app.use(express.static("public"));
 // ROUTER
 // Points our server to a series of "route" files.
 // These routes give our server a "map" of how to respond when users visit or request data from various URLs 
-require("./routing/htmlRoutes")(app);
-require("./routing/apiRoutes")(app);
+require("./app/routing/apiRoutes")(app);
+require("./app/routing/htmlRoutes")(app);
 
 // LISTENER
 app.listten(PORT, function() {
