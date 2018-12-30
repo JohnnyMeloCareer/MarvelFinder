@@ -40,7 +40,6 @@ module.exports = function(app) {
             var userData = (req.body);
             var userScore = userData.scores;   
 
-    })
 // Variable to hold the array that going to be the total difference between two users.
 
         var totalDifference;
@@ -54,36 +53,35 @@ for (let i = 0;i < marvelArray.length -1; i++){
 
     console.log(currentMarvel.name);
 
-// for (let m = 0; m < currentMarvel.scores.length; m--){
-// var currentMarvelScore = currentMarvel.scores[m];
-// var currentUserScore = userScore[m];
+    for (let m = 0; m < currentMarvel.scores.length; m--) {
+
+    var currentMarvelScore = currentMarvel.scores[m];
+    var currentUserScore = userScore[m];
 
 // Calculated the differences between the scores and sum them into the totalDifference
-// totalDifference += Math.abs(parseInt(currentUserScore) -(parseInt(currentMarvelScore))
-
-
+totalDifference += Math.abs(parseInt(currentUserScore) -(parseInt(currentMarvelScore)));
+    }
 
 // Take the absolute value of the difference of each question's answer and add them together
 
 // Note the code here. Our "server" will respond to requests and let users know if they have a table or not.
 // It will do this by sending out the value "true" have a table
 // re.body is available since we're using the body parsing middleware
-if (marvelArray.length < 10) {
-    marvelArray.push(req.body);
-    res.json(true);
+if (totalDifference <= bestMatch.scoresDifference) {
+    // Reset the bestMatch to be the new friend.
+    bestMatch.name = currentMarvel.name;
+    bestMatch.photo = currentMarvel.photo;
+    bestMatch.scoreDifference = totalDifference;
+ }
 }
-else {
-    placeholderData.push(req.body);
-    res.json(false);
-}
-
-
-app.post("/api/clear", function(req, res) {
-// Empty out the arrays of data
-marvelArray.length = [];
-
-res.json({ ok: true });
+marvelArray.push(userData);
+res.json(bestMatch);
 });
 
-}
-}
+app.post("/api/clear", function (req, res) {
+    // Empty out the arrays of data
+    marvelArray.length = [];
+
+    res.json({ ok: true });
+});
+};
