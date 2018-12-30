@@ -26,7 +26,7 @@ app.use(bodyParser.raw({ type: 'application/vnd.custom-type' }))
 app.use(bodyParser.text({ type: 'text/html' }))
 
 // This make my public folder the route of the folder directory.
-app.use(express.static("public"));
+app.use(express.static("app/public"));
 // ROUTER
 // Points our server to a series of "route" files.
 // These routes give our server a "map" of how to respond when users visit or request data from various URLs 
@@ -35,5 +35,5 @@ require("./app/routing/htmlRoutes")(app);
 
 // LISTENER
 app.listten(PORT, function() {
-    console.log("App listening on PORT: " + PORT);
+    console.log("App listening on: " + "http://localhost:" + PORT);
 });
