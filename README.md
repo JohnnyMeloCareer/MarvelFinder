@@ -3,24 +3,24 @@ This full-stack site will take in results from your users' surveys, then compare
 
 ### Marvel Finder Main Page
 - content: 
-![alt text](https://github.com/JohnnyMeloCareer/FriendFinder/blob/master/public/assets/images/Marvel%20Finder%20Home%20Page.jpg?raw=true)
+![alt text](https://github.com/JohnnyMeloCareer/FriendFinder/blob/master/app/public/assets/images/Marvel%20Finder%20Home%20Page.jpg)
 
 ### Marvel Finder Survey Page
 - content:
-![alt text](https://github.com/JohnnyMeloCareer/FriendFinder/blob/master/public/assets/images/Marvel%20Finder%20Survey%20Page.jpg?raw=true)
+![alt text](https://github.com/JohnnyMeloCareer/FriendFinder/blob/master/app/public/assets/images/Marvel%20Finder%20Survey%20Page.jpg)
 
 ### Marvel Finder Survey Page #2
 - content:
-![alt text](https://github.com/JohnnyMeloCareer/FriendFinder/blob/master/public/assets/images/Marvel%20Finder%20Survey%20Page%20%234-10.jpg?raw=true)
+![alt text](https://github.com/JohnnyMeloCareer/FriendFinder/blob/master/app/public/assets/images/Marvel%20Finder%20Survey%20Page%20%234-10.jpg)
 
 ### Marvel Finder Survey Page Submit
 - content:
-![alt text](https://github.com/JohnnyMeloCareer/FriendFinder/blob/master/public/assets/images/Marvel%20Finder%20Survey%20Page%20Submit%20button.jpg)
+![alt text](https://github.com/JohnnyMeloCareer/FriendFinder/blob/master/app/public/assets/images/Marvel%20Finder%20Survey%20Page%20Submit%20button.jpg)
 
 # Marvel Finder Technologies 
 - Bootstrap
 - Fontawesome
 
-# Marvel Finder Conclusion
-- Marvel Finder, is a very exciting ways to match up with a favorite super hero of yours! 
+# Marvel Finder Questions/Contact
+- 
 
