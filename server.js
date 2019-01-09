@@ -34,6 +34,6 @@ require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
 
 // LISTENER
-app.listten(PORT, function() {
+app.listen(PORT, function() {
     console.log("App listening on: " + "http://localhost:" + PORT);
 });
