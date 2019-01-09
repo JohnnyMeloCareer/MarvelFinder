@@ -2,7 +2,7 @@
 // We are linking our routes to a series of "data" sources.
 // These data sources hold arrays of information on placeholder-data, etc
 
-var marvelArray = require("../data/marvel");
+var marvelArray = require("../data/marvelArray.js");
 
 // ROUTING 
 
@@ -12,7 +12,6 @@ module.exports = function(app) {
 // Below code handles when users "visit" a page.
 // In each of the below cases when a user visits a link
 // (ex: localhost:PORT/api/admin... they are shown a JSON of the data in the table)
-
     app.get("/api/marvel", function(req, res) {
         res.json(marvelArray);
     });
@@ -26,7 +25,6 @@ module.exports = function(app) {
 // the JSON is pushed to the appropriate JavaScript array
 // (ex. User fills out a placeholder request... this data is sent to the server...)
 // Then the server saves the data to the placeholderData array)
-
     app.post("/api/marvel", function(req, res) {
         
         marvelArray.push(req.body); 
@@ -53,13 +51,13 @@ for (let i = 0;i < marvelArray.length -1; i++){
 
     console.log(currentMarvel.name);
 
-    for (let m = 0; m < currentMarvel.scores.length; m--) {
+    for (let m = 0; m < currentMarvel.scores.length; m++) {
 
     var currentMarvelScore = currentMarvel.scores[m];
     var currentUserScore = userScore[m];
 
 // Calculated the differences between the scores and sum them into the totalDifference
-totalDifference += Math.abs(parseInt(currentUserScore) -(parseInt(currentMarvelScore)));
+totalDifference += Math.abs(parseInt(currentUserScore) - (parseInt(currentMarvelScore)));
     }
 
 // Take the absolute value of the difference of each question's answer and add them together

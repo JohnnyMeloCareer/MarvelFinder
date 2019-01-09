@@ -26,6 +26,7 @@
         <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
         <!-- Fontawesome -->
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <link rel="stylesheet" href="/assets/css/survey.css">
     </head>
     <body>
         <div class="container">
@@ -46,7 +47,7 @@
                 <!-- Question 1-->
                 <div class="form-group">
                     <h4>Question 1</h4>
-                    <label for="question1">You like spiders.</label>
+                    <label for="question1">Do you like spiders.</label>
                     <select required class="form-control chosen-select question" id="q1">
                         <option value="">Select and Option</option>
                         <option value="1">1 (Strongly Disagree)</option>
@@ -236,92 +237,8 @@
             </div>
             </div>
         </div>
-
-        <style>
-            body {
-                font-family: 'Acme', sans-serif;
-                background-image: url(https://c394391.ssl.cf2.rackcdn.com/1493431047.png);
-                background-size: cover;
-                background-repeat: no-repeat;
-                background-position: center center;
-            }
-            a {
-                padding-bottom: 20px;
-            }
-            label {
-                font-size: 17px;
-            }
-            #surveyHeader {
-                margin-top: 20px;
-                font-size: 50px;
-            }
-            #formSubmit {
-                width: 100%;
-                font-size: 20px;
-                background-color: lightskyblue;
-                border-color: lightgoldenrodyellow;
-            }
-            #formSubmit:hover {
-                background-color: lightcoral;
-                border-color: lightgoldenrodyellow;
-            }
-            h4 {
-                font-weight: normal;
-            }
-            .question{
-                width: 200px;
-            }
-        </style>
-
-        <script>
-            $("#formSubmit").on("click", function(event) {
-                event.preventDefault();
-                function formValidation() {
-                    var isValid = true;
-                    $(".form-control").each(function() {
-                        if($(this).val() === "") {
-                            isValid = false;
-                        }
-                    });
-                    return isValid;
-                };
-                if (formValidation()) {
-                    var newFriendData = {
-                        name: $("#userName").val(),
-                        photo: $("#userPicture").val(),
-                        scores: [
-                            $("#q1").val(),
-                            $("#q2").val(),
-                            $("#q3").val(),
-                            $("#q4").val(),
-                            $("#q5").val(),
-                            $("#q6").val(),
-                            $("#q7").val(),
-                            $("#q8").val(),
-                            $("#q9").val(),
-                            $("#q10").val()
-                        ]
-                    };
-                    // Sending the user information to apiRoutes.js to match with friend, then it sends back the best match
-                    // function(data) data - contains bestMatch information
-                    $.post("/api/friends", newFriendData, function(data) {
-                        // If statement is able to run because res.json(bestMatch); in the app.post request in apiRoutes.js, which sent back the best match based on the user's answers
-                        if (data) {
-                            $("#bestMatchName").text("Hello, " + newFriendData.name + "! My name is " + data.name + "!");
-                            $("#bestMatchPhoto").attr("src", data.photo);
-                            $("#bestMatchModal").modal("toggle");
-                          
-                        }
-                    });
-                } else {
-                    $("#formControlModal").modal("toggle");
-                }
-            });
-            $("#doItAgain").on("click", function(event) {
-                event.preventDefault();
-                location.reload();
-            })
-        </script>
+        
+      <script src="assets/javascript/survey.js"></script>
     </body> 
     </body>
 </html>

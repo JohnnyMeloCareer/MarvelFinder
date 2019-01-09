@@ -1,0 +1,33 @@
+body {
+    font-family: 'Acme', sans-serif;
+    background-image: url(https://c394391.ssl.cf2.rackcdn.com/1493431047.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+a {
+    padding-bottom: 20px;
+}
+label {
+    font-size: 17px;
+}
+#surveyHeader {
+    margin-top: 20px;
+    font-size: 50px;
+}
+#formSubmit {
+    width: 100%;
+    font-size: 20px;
+    background-color: lightskyblue;
+    border-color: lightgoldenrodyellow;
+}
+#formSubmit:hover {
+    background-color: lightcoral;
+    border-color: lightgoldenrodyellow;
+}
+h4 {
+    font-weight: normal;
+}
+.question{
+    width: 200px;
+}
