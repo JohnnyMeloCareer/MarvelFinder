@@ -1,7 +1,7 @@
 # MarvelFinder
 This full-stack site will take in results from your users' surveys, then compare their answers with those from other users. The app will then display the name and picture of the user with the best overall match. This site is mainly themed around Marvel characters, and has a array with over 10 Marvel Character!
 
-**Heroku Link: https://immense-mesa-82284.herokuapp.com/**
+**Heroku Link: https://marvelfinder.herokuapp.com/**
 
 ### Marvel Finder Main Page
 - content: 
