@@ -24,7 +24,7 @@ This full-stack site will take in results from your users' surveys, then compare
 - Fontawesome
 
 ## Marvel Finder Questions/Contact
-- **Johnny Melo** 
+**Johnny Melo** 
 
 Email: JohnnyMeloCareer@gmail.com
 
